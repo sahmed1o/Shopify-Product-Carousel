@@ -1,0 +1,177 @@
+{{ content_for_index }}
+
+<script>
+$(document).ready(function() {
+  $('.owl-carousel').owlCarousel({
+    items: 10,
+
+    loop:false,
+    margin:10,
+    nav:true,
+    navText : ["<",">"],
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+      800:{
+            items:4
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  
+});
+</script>
+
+
+<!--
+HEADER STUFF
+-->
+
+
+<hr>
+
+<div class="section-header text-center">
+  
+      <style>
+    @media (min-width:1200px) {
+      .hidead {
+        display:inline-block;
+      }
+    }
+
+    @media (max-width:1199px) {
+      .hidead {
+        display:inline-block;
+      }
+    }
+
+    @media (max-width:991px) {
+      .hidead {
+        display:none;
+      }
+    }
+
+    @media (max-width:767px) {
+      .hidead {
+        display:none;
+      }
+    }
+
+    </style>
+  
+</div>
+<!--
+HEADER STUFF
+-->
+
+<hr>
+<h1>title of product carousel <a href="https://YourSite.com/collections/deals" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['deals'].products by 10 %}
+
+  {% for product in collections['deals'].products %}
+ 
+  <div class="item" >
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<hr>
+<h1>Computers &amp; Peripherals <a href="https://YourSite.com/collections/computers-peripherals" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['computers-peripherals'].products by 10 %}
+
+  {% for product in collections['computers-peripherals'].products %}
+ 
+  <div class="item">
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<hr>
+<h1>Electronics &amp; Gadgets <a href="https://YourSite.com/collections/tech-gadgets" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['tech-gadgets'].products by 10 %}
+
+  {% for product in collections['tech-gadgets'].products %}
+ 
+  <div class="item">
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<hr>
+<h1>Hobbies <a href="https://YourSite.com/collections/hobbies-1" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['hobbies-1'].products by 10 %}
+
+  {% for product in collections['hobbies-1'].products %}
+ 
+  <div class="item">
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<hr>
+<h1>Phone Related <a href="https://YourSite.com/collections/phone-stuff" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['phone-stuff'].products by 10 %}
+
+  {% for product in collections['phone-stuff'].products %}
+ 
+  <div class="item">
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<hr>
+<h1>Audio <a href="https://YourSite.com/collections/audio-1" style="font-size: 15px; margin-left: 5px;">See More</a></h1>
+<div class="owl-carousel owl-theme">
+ 
+  {% paginate collections['audio-1'].products by 10 %}
+
+  {% for product in collections['audio-1'].products %}
+ 
+  <div class="item">
+  {% include 'deal-grid-item-2' %}
+   </div>
+        
+   {% endfor %}
+  {% endpaginate %}
+  
+</div>
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js" type="text/javascript"></script>
